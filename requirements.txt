@@ -1,6 +1,5 @@
 discord.py
 requests
 emojis
-importlib
 os
 sys
