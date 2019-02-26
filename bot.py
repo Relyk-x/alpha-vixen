@@ -45,7 +45,23 @@ async def on_ready():
     print("Ready to go!")
     print(f"Serving: {len(bot.guilds)} guilds.")
     await bot.change_presence(status=green, activity=discord.Game(name="v0.2.0 | v.help", type=3))
-       
+
+#error commands
+@bot.listen()
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send(f"Command is not found. Please check commands and try again.")
+        return
+    elif isinstance(error, commands.MissingPermissions):
+    	await ctx.send(f"Command is forbidden. You are lacking permissions.")
+    	return
+    elif isinstance(error, commands.NotOwner):
+    	await ctx.send(f"Command is forbidden. You are not the owner.")
+    	return
+    elif isinstance(error, commands.CheckFailure):
+    	await ctx.send(f"Command is nsfw. Please set channel to nsfw and try again.")
+    	return
+
 #ping latency command
 @bot.command()
 async def ping(ctx):
