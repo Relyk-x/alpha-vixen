@@ -6,7 +6,6 @@ import datetime
 import time
 import random
 import requests
-import emojis
 import os
 import sys
 
