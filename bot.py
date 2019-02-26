@@ -34,7 +34,7 @@ diff = datetime.datetime(now.year, 2, 13) - \
     datetime.datetime.today()  # Days until Christmas
 
 #client
-bot = commands.Bot(command_prefix="v!", status=yellow, activity=discord.Game(name="v0.2.0 | Booting...", type=3))
+bot = commands.Bot(command_prefix="v.", status=yellow, activity=discord.Game(name="v0.2.0 | Booting...", type=3))
 
 #command removal 
 bot.remove_command("help")
@@ -44,7 +44,7 @@ bot.remove_command("help")
 async def on_ready():
     print("Ready to go!")
     print(f"Serving: {len(bot.guilds)} guilds.")
-    await bot.change_presence(status=green, activity=discord.Game(name="v0.2.0 | v!help", type=3))
+    await bot.change_presence(status=green, activity=discord.Game(name="v0.2.0 | v.help", type=3))
        
 #ping latency command
 @bot.command()
