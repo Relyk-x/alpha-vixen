@@ -1,4 +1,2 @@
-discord.py
+https://github.com/rapptz/discord.py/zipball/rewrite
 requests
-emojis
-git+https://github.com/Rapptz/discord.py@rewrite#egg=discord.py[voice]
