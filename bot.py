@@ -11,10 +11,10 @@ import os
 import sys
 
 #import config
-if not os.path.isfile("config.py"):
-    sys.exit("'config.py' not found! Please add it and try again.")
-else:
+try:
     import config
+except:
+    sys.exit("'config.py' not found! Please add it and try again.")
 
 #colors
 red = discord.Status.dnd
