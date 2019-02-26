@@ -1,2 +1,9 @@
 discord.py
+datetime
+time
+random
 requests
+emojis
+importlib
+os
+sys
