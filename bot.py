@@ -7,8 +7,6 @@ import time
 import random
 import requests
 import emojis
-import json
-import importlib
 import os
 import sys
 
