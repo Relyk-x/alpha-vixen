@@ -487,4 +487,4 @@ async def cmds(ctx):
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
 	await ctx.send(embed=emb)
 
-bot.run(os.getenv(("TOKEN"))
+bot.run(os.getenv("TOKEN"))
