@@ -388,6 +388,12 @@ async def embed(ctx, *msg):
     emb = discord.Embed(description=echo, color=0xe02f5a)
     return await ctx.send(embed=emb)
 
+#discord ToS command
+@bot.command()
+async def tos(ctx):
+    await ctx.send(f"{author.name} here are the Discord ToS: https://discordapp.com/terms")
+    await msg.add_reaction(discord.utils.get(bot.emojis, name="discord"))
+
 #Says something mean about you. (40 insults)
 @bot.command()
 async def insult(ctx, member:discord.User = None):
