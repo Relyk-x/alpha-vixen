@@ -489,6 +489,19 @@ async def pat(ctx, member:discord.User = None):
 	emb = discord.Embed(description=f"***{member.name}**, you got a pat from **{ctx.message.author.name}***", color=0xe02f5a)
 	emb.set_image(url=random.choice(config.pat))
 	await ctx.send(embed=emb)
+	
+#pat command (15 gifs)
+@bot.command()
+async def slap(ctx, member:discord.User = None):
+	if member == ctx.author:
+		await ctx.send("You can't slap yourself...")
+		return
+	if member == None:
+		await ctx.send("You can't slap thin air...")
+		return
+	emb = discord.Embed(description=f"***{member.name}**, you got a slap from **{ctx.message.author.name}***", color=0xe02f5a)
+	emb.set_image(url=random.choice(config.slap))
+	await ctx.send(embed=emb)
 
 #help command
 @bot.command()
