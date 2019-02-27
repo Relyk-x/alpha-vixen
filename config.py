@@ -95,3 +95,21 @@ pat = ["https://cdn.discordapp.com/attachments/535747082192027651/54954592251464
 "https://cdn.discordapp.com/attachments/535747082192027651/549562704961077258/pat14.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/549563261498949652/pat15.gif",
 ]
+
+# S L A P – G I F S
+slap = ["https://cdn.discordapp.com/attachments/535747082192027651/550198108949053460/slap1.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550198165907832843/slap2.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550198244601233418/slap3.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550198473484664832/slap4.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550198533949489152/slap5.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550198693484036096/slap6.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550198907515174912/slap7.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550199416993218590/slap8.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550200853840265216/slap9.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550201084036251668/slap10.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550201566083153941/slap11.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550201740419399680/slap12.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550202354121572372/slap13.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550202502294011905/slap14.gif",
+"https://cdn.discordapp.com/attachments/535747082192027651/550203379608190986/slap15.gif",
+]
