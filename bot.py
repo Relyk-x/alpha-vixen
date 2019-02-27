@@ -430,7 +430,7 @@ async def urban(ctx, *msg):
         emb.set_author(name=f"Word:")
         emb.add_field(name="Definition:", value=defin, inline=False)
         emb.add_field(name="Examples:", value=examp, inline=False)
-        emb.add_field(name="Votes:", value=f":thumbsup: {upvotes} {p} :thumbsdown: {dwnvotes}", inline=True)
+        emb.add_field(name="Votes:", value=f":thumbsup: {upvotes} | :thumbsdown: {dwnvotes}", inline=True)
         await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
         await ctx.send(embed=emb)
     except:
