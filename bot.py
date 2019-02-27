@@ -490,7 +490,7 @@ async def pat(ctx, member:discord.User = None):
 	emb.set_image(url=random.choice(config.pat))
 	await ctx.send(embed=emb)
 	
-#pat command (15 gifs)
+#slap command (15 gifs)
 @bot.command()
 async def slap(ctx, member:discord.User = None):
 	if member == ctx.author:
