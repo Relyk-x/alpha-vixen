@@ -46,6 +46,11 @@ async def on_ready():
     print(f"Serving: {len(bot.guilds)} guilds.")
     await bot.change_presence(status=green, activity=discord.Game(name="v0.2.0 | v.help", type=3))
 
+@bot.listen()
+async def on_message(message):
+    if "<@!257784039795064833>" in message.content:
+        await message.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
+
 #error commands
 @bot.listen()
 async def on_command_error(ctx, error):
