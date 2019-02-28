@@ -48,7 +48,7 @@ async def on_ready():
 
 @bot.listen()
 async def on_message(message):
-    if "<@!257784039795064833>" in message.content:
+    if "<@257784039795064833>" in message.content:
         await message.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
 
 #error commands
