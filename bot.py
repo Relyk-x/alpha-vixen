@@ -260,7 +260,7 @@ async def invite(ctx):
 	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
 	#await ctx.trigger_typing(ctx.message.channel)
 	emb = discord.Embed(title=":envelope_with_arrow: Invite", color=0xe02f5a)
-	emb.add_field(name="Link:", value="http://bit.ly/vixen-botinvite")
+	emb.add_field(name="Link:", value="http://bit.ly/discordapp-vixen-bot")
 	await ctx.send(embed=emb)
 
 #vote for my bot
