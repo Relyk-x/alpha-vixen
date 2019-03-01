@@ -274,7 +274,7 @@ async def vote(ctx):
 	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
 	#await ctx.trigger_typing(ctx.message.channel)
 	emb = discord.Embed(title=":arrow_up: Vote", color=0xe02f5a)
-	emb.add_field(name="Link:", value="https://discordbots.org/ - haven't aproved me yet :sob:")
+	emb.add_field(name="Link:", value="https://discordbots.org/bot/545161003617484820/vote")
 	await ctx.send(embed=emb)
 
 #generate a password
@@ -396,7 +396,10 @@ async def embed(ctx, *msg):
 #discord ToS command
 @bot.command()
 async def tos(ctx):
-    msg = await ctx.send(f"{ctx.message.author.name} here are the Discord ToS: https://discordapp.com/terms")
+    emb = discord.Embed(title="Discord Terms of Service", url="https://discordapp.com/terms", description="This is the Discord ToS meta description. Wow, helpful meta description Discord. Thanks!", color=0x7289da)
+    emb.set_author(name="Discord")
+    emb.set_thumbnail(url="https://cdn.discordapp.com/attachments/535747082192027651/550348313866534950/discordapp.png")
+    msg = await ctx.send(embed=emb)
     await msg.add_reaction(discord.utils.get(bot.emojis, name="discord"))
 
 #Says something mean about you. (40 insults)
