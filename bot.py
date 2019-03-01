@@ -416,6 +416,23 @@ async def insult(ctx, member:discord.User = None):
     	await msg.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
     	return
 
+#Says something funny to you. (35 jokes)
+@bot.command()
+async def joke(ctx, member:discord.User = None):
+    if member == None:
+        member = ctx.message.author
+    if member == id("257784039795064833"):
+    	await ctx.send("You can't insult my master!")
+    	return
+    if member == id("545161003617484820"):
+    	msg = await ctx.send(f"You can't insult me... {ctx.message.author.name} {random.choice(config.jokes)}")
+    	await msg.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
+    	return
+    else:
+    	msg = await ctx.send(f"{member.name} {random.choice(config.jokes)}")  # Mention the user and say the insult
+    	await msg.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
+    	return
+
 #urban command
 @bot.command()
 @commands.is_nsfw()
