@@ -122,11 +122,11 @@ jokes = ["today at the bank, an old lady asked me to help check her balance... S
 "I'm so good at sleeping... I can do it with my eyes closed.",
 "my boss told me to have a good day... so I went home.",
 "why is Peter Pan always flying? ...He neverlands.",
-"a woman walks into a library and asked if they had any books about paranoia... The librarian says \"They're right behind you!\""
+"a woman walks into a library and asked if they had any books about paranoia... The librarian says \"They're right behind you!\"",
 "the other day, my wife asked me to pass her lipstick but I accidentally passed her a glue stick... She still isn't talking to me.",
 "why do blind people hate skydiving? ...It scares the hell out of their dogs.",
 "when you look really closely, ...all mirrors look like eyeballs.",
-"my friend says to me: \"What rhymes with orange\" I said: \"No it doesn't\""
+"my friend says to me: \"What rhymes with orange\" I said: \"No it doesn't\"",
 "what do you call a guy with a rubber toe? ...Roberto.",
 "what did the pirate say when he turned 80 years old? ...Aye matey.",
 "my wife told me I had to stop acting like a flamingo... So I had to put my foot down.",
