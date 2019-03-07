@@ -55,22 +55,26 @@ async def on_message(message):
 @bot.listen()
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
         await ctx.send(f"Command is not found. Please check commands and try again.")
         return
     elif isinstance(error, commands.MissingPermissions):
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
     	await ctx.send(f"Command is forbidden. You are lacking permissions.")
     	return
     elif isinstance(error, commands.NotOwner):
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
     	await ctx.send(f"Command is forbidden. You are not the owner.")
     	return
     elif isinstance(error, commands.CheckFailure):
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
     	await ctx.send(f"Command is nsfw. Please set channel to nsfw and try again.")
     	return
 
 #ping latency command
 @bot.command()
 async def ping(ctx):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	#await message.channel.startTyping();
 	ping_ = bot.latency
 	ping = round(ping_ * 1000)
@@ -166,7 +170,7 @@ async def count(ctx):
 	 else:
 	  members += 1
 	  total += 1
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	emb = discord.Embed(title=":information_source: Server Count",color=0xe02f5a)
 	emb.add_field(name="Status", value=f"{on}Online: {on_line}\n{ide}Idle: {on_idle}\n{dnds}Do Not Disturb: {on_dnd}\n{off}Offline: {off_line}", inline=True)
 	emb.add_field(name="Server",value=f"{p}Members: {total}\n{p}Users: {members}\n{p}Bots: {bots}", inline=True)
@@ -190,7 +194,7 @@ async def server(ctx):
 	 else:
 	  members += 1
 	  total += 1
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	#await ctx.trigger_typing(ctx.message.channel)
 	crea = ctx.message.guild.created_at.strftime("%A\n%-d of %B %Y\n%I:%M %p")
 	emb = discord.Embed(title=":information_source: Server Information", description="Here's what I could find...", color=0xe02f5a)
@@ -208,6 +212,7 @@ async def server(ctx):
 	emb.add_field(name="Created", value=crea, inline=True)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url) 
 	await ctx.send(embed=emb)
+	
 #user information
 @bot.command()
 async def user(ctx, member: discord.Member = None):
@@ -225,7 +230,7 @@ async def user(ctx, member: discord.Member = None):
 	#if member == is_bot:
 		#char = "Bot"
 	#elif: char = "User"
-    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
     #await ctx.trigger_typing(ctx.message.channel)
     char = "User"
     crea = member.created_at.strftime("%A\n%-d of %B %Y\n%I:%M %p")
@@ -244,7 +249,7 @@ async def user(ctx, member: discord.Member = None):
 #server icon picture
 @bot.command()
 async def icon(ctx):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	emb = discord.Embed(title="Server Icon", color=0xe02f5a)
 	emb.set_image(url=ctx.message.guild.icon_url)
 	await ctx.send(embed=emb)
@@ -252,7 +257,7 @@ async def icon(ctx):
 #user avatar picture
 @bot.command()
 async def avatar(ctx, member:discord.User = None):
-    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
     if member == None:
         member = ctx.message.author
     emb = discord.Embed(title="User Avatar", color=0xe02f5a)
@@ -262,7 +267,7 @@ async def avatar(ctx, member:discord.User = None):
 #bot invite
 @bot.command()
 async def invite(ctx):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	#await ctx.trigger_typing(ctx.message.channel)
 	emb = discord.Embed(title=":envelope_with_arrow: Invite", color=0xe02f5a)
 	emb.add_field(name="Link:", value="http://bit.ly/discordapp-vixen-bot")
@@ -271,7 +276,7 @@ async def invite(ctx):
 #vote for my bot
 @bot.command()
 async def vote(ctx):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	#await ctx.trigger_typing(ctx.message.channel)
 	emb = discord.Embed(title=":arrow_up: Vote", color=0xe02f5a)
 	emb.add_field(name="Link:", value="https://discordbots.org/bot/545161003617484820/vote")
@@ -462,10 +467,10 @@ async def urban(ctx, *msg):
         emb.add_field(name="Definition:", value=defin, inline=False)
         emb.add_field(name="Examples:", value=examp, inline=False)
         emb.add_field(name="Votes:", value=f":thumbsup: {upvotes} | :thumbsdown: {dwnvotes}", inline=True)
-        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
         await ctx.send(embed=emb)
     except:
-        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="mark"))
+        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
         emb = discord.Embed(title="`Error`", description="404: Not Found... <:blobsweat:546851214026080307>", colour=0xe02f5a)
         await ctx.send(embed=emb)
 		#\nuhhhh... I don't know how to get those... <:blobsweat:546851214026080307>
@@ -536,7 +541,7 @@ async def help(ctx):
 	emb.add_field(name="General commands", value=f"{p}server\n{p}user\n{p}tos\n{p}say\n{p}embed\n{p}avatar\n{p}icon\n{p}password\n{p}invite\n{p}vote", inline=False)
 	emb.add_field(name="Fun Commands", value=f"{p}hug\n{p}kiss\n{p}pat\n{p}slap\n{p}birthday\n{p}urban\n{p}joke\n{p}insult", inline=False)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	await ctx.send(embed=emb)
 
 bot.run(os.getenv("TOKEN"))
