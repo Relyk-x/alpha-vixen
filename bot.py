@@ -55,19 +55,19 @@ async def on_message(message):
 @bot.listen()
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
+        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
         await ctx.send(f"Command is not found. Please check commands and try again.")
         return
     elif isinstance(error, commands.MissingPermissions):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
+        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
     	await ctx.send(f"Command is forbidden. You are lacking permissions.")
     	return
     elif isinstance(error, commands.NotOwner):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
+        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
     	await ctx.send(f"Command is forbidden. You are not the owner.")
     	return
     elif isinstance(error, commands.CheckFailure):
-	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
+        await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
     	await ctx.send(f"Command is nsfw. Please set channel to nsfw and try again.")
     	return
 
