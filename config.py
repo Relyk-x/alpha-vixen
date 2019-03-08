@@ -1,5 +1,6 @@
 # I N S U L T S
-insult = ["if laughter is the best medicine, your face must be curing the world.", 
+insult = [
+"if laughter is the best medicine, your face must be curing the world.", 
 "it's better to let someone think you are an idiot than to open your mouth and prove it.", 
 "if I had a face like yours, I'd sue my parents.", 
 "you're so ugly, when your mom dropped you off at school she got a fine for littering.", 
@@ -43,7 +44,8 @@ insult = ["if laughter is the best medicine, your face must be curing the world.
 ]
 
 # H U G G I N G - G I F S
-hug = ["https://cdn.discordapp.com/attachments/535747082192027651/548920412310994944/hug1.gif", 
+hug = [
+"https://cdn.discordapp.com/attachments/535747082192027651/548920412310994944/hug1.gif", 
 "https://cdn.discordapp.com/attachments/535747082192027651/548920581475794944/hug2.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/548920918995501057/hug3.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/548921229046972436/hug4.gif",
@@ -61,7 +63,8 @@ hug = ["https://cdn.discordapp.com/attachments/535747082192027651/54892041231099
 ]
 
 # K I S S I N G – G I F S
-kiss = ["https://cdn.discordapp.com/attachments/535747082192027651/549532607587549194/kiss1.gif",
+kiss = [
+"https://cdn.discordapp.com/attachments/535747082192027651/549532607587549194/kiss1.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/549532718552317962/kiss2.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/549534046904909853/kiss3.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/549538205662183444/kiss4.gif",
@@ -79,7 +82,8 @@ kiss = ["https://cdn.discordapp.com/attachments/535747082192027651/5495326075875
 ]
 
 # P A T – G I F S
-pat = ["https://cdn.discordapp.com/attachments/535747082192027651/549545922514649100/pat1.gif",
+pat = [
+"https://cdn.discordapp.com/attachments/535747082192027651/549545922514649100/pat1.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/549546071773151252/pat2.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/549546340905123870/pat3.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/549546840316706817/pat4.gif",
@@ -97,7 +101,8 @@ pat = ["https://cdn.discordapp.com/attachments/535747082192027651/54954592251464
 ]
 
 # S L A P – G I F S
-slap = ["https://cdn.discordapp.com/attachments/535747082192027651/550198108949053460/slap1.gif",
+slap = [
+"https://cdn.discordapp.com/attachments/535747082192027651/550198108949053460/slap1.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/550198165907832843/slap2.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/550198244601233418/slap3.gif",
 "https://cdn.discordapp.com/attachments/535747082192027651/550198473484664832/slap4.gif",
@@ -115,7 +120,8 @@ slap = ["https://cdn.discordapp.com/attachments/535747082192027651/5501981089490
 ]
 
 # J O K E S
-jokes = ["today at the bank, an old lady asked me to help check her balance... So I pushed her over.",
+jokes = [
+"today at the bank, an old lady asked me to help check her balance... So I pushed her over.",
 "I bought some shoes from a drug dealer... I don't know what he laced them with, but I've been tripping all day.",
 "I told my girlfriend she drew her eyebrows too high... She seemed surprised.",
 "my dog used to chase people on a bike a lot... It got so bad, finally I had to take his bike away.",
@@ -150,4 +156,28 @@ jokes = ["today at the bank, an old lady asked me to help check her balance... S
 "I just wrote a book on reverse psychology... Do *not* read it!",
 "what did one hat say to the other? ...You stay here. ...I’ll go on ahead.",
 "why wouldn’t the shrimp share his treasure? ...Because he was a little shellfish.",
+]
+
+# H E A R T S
+heart = [
+"▒░░░░░░░░░░░░░░░░░░░  5%",
+"▒▒░░░░░░░░░░░░░░░░░░  10%",
+"▒▒▒░░░░░░░░░░░░░░░░░  15%",
+"▒▒▒▒░░░░░░░░░░░░░░░░  20%",
+"▒▒▒▒▒░░░░░░░░░░░░░░░  25%",
+"▒▒▒▒▒▒░░░░░░░░░░░░░░  30%",
+"▒▒▒▒▒▒▒░░░░░░░░░░░░░  35%",
+"▒▒▒▒▒▒▒▒░░░░░░░░░░░░  40%",
+"▒▒▒▒▒▒▒▒▒░░░░░░░░░░░  45%",
+"▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░  50%",
+"▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░  55%",
+"▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░  60%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░  65%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░  70%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░  75%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░  80%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░  85%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░  90%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░  95%",
+"▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒  100%",
 ]
