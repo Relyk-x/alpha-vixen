@@ -416,6 +416,7 @@ async def lovecalc(ctx, member:discord.User = None):
     if member == None:
         await ctx.send("You can't calculate nothing...")
         return
+    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
     emb = discord.Embed(title="Love Calculator", description=f"**{ctx.message.author.name}《 :heartpulse: 》{member.name}**", color=0xe02f5a)
     emb.add_field(name="Result:", value=f"{random.choice(config.heart)}")
     emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url) 
