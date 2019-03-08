@@ -159,25 +159,29 @@ jokes = [
 ]
 
 # H E A R T S
+h = "<:half:553571998547312641>"
+f = "<:full:553569761393508354>"
+e = "<:empty:553571894457139241>"
+
 heart = [
-":half::empty::empty::empty::empty::empty::empty::empty::empty::empty:  5%",
-":full::empty::empty::empty::empty::empty::empty::empty::empty::empty:  10%",
-":full::half::empty::empty::empty::empty::empty::empty::empty::empty:  15%",
-":full::full::empty::empty::empty::empty::empty::empty::empty::empty:  20%",
-":full::full::half::empty::empty::empty::empty::empty::empty::empty:  25%",
-":full::full::full::empty::empty::empty::empty::empty::empty::empty:  30%",
-":full::full::full::half::empty::empty::empty::empty::empty::empty:  35%",
-":full::full::full::full::empty::empty::empty::empty::empty::empty:  40%",
-":full::full::full::full::half::empty::empty::empty::empty::empty:  45%",
-":full::full::full::full::full::empty::empty::empty::empty::empty:  50%",
-":full::full::full::full::full::half::empty::empty::empty::empty:  55%",
-":full::full::full::full::full::full::empty::empty::empty::empty:  60%",
-":full::full::full::full::full::full::half::empty::empty::empty:  65%",
-":full::full::full::full::full::full::full::empty::empty::empty:  70%",
-":full::full::full::full::full::full::full::half::empty::empty:  75%",
-":full::full::full::full::full::full::full::full::empty::empty:  80%",
-":full::full::full::full::full::full::full::full::half::empty:  85%",
-":full::full::full::full::full::full::full::full::full::empty:  90%",
-":full::full::full::full::full::full::full::full::full::half:  95%",
-":full::full::full::full::full::full::full::full::full::full:  100%",
+f"{h}{e}{e}{e}{e}{e}{e}{e}{e}{e}  5%",
+f"{f}{e}{e}{e}{e}{e}{e}{e}{e}{e}  10%",
+f"{f}{h}{e}{e}{e}{e}{e}{e}{e}{e}  15%",
+f"{f}{f}{e}{e}{e}{e}{e}{e}{e}{e}  20%",
+f"{f}{f}{h}{e}{e}{e}{e}{e}{e}{e}  25%",
+f"{f}{f}{f}{e}{e}{e}{e}{e}{e}{e}  30%",
+f"{f}{f}{f}{h}{e}{e}{e}{e}{e}{e}  35%",
+f"{f}{f}{f}{f}{e}{e}{e}{e}{e}{e}  40%",
+f"{f}{f}{f}{f}{h}{e}{e}{e}{e}{e}  45%",
+f"{f}{f}{f}{f}{f}{e}{e}{e}{e}{e}  50%",
+f"{f}{f}{f}{f}{f}{h}{e}{e}{e}{e}  55%",
+f"{f}{f}{f}{f}{f}{f}{e}{e}{e}{e}  60%",
+f"{f}{f}{f}{f}{f}{f}{h}{e}{e}{e}  65%",
+f"{f}{f}{f}{f}{f}{f}{f}{e}{e}{e}  70%",
+f"{f}{f}{f}{f}{f}{f}{f}{h}{e}{e}  75%",
+f"{f}{f}{f}{f}{f}{f}{f}{f}{e}{e}  80%",
+f"{f}{f}{f}{f}{f}{f}{f}{f}{h}{e}  85%",
+f"{f}{f}{f}{f}{f}{f}{f}{f}{f}{e}  90%",
+f"{f}{f}{f}{f}{f}{f}{f}{f}{f}{h}  95%",
+f"{f}{f}{f}{f}{f}{f}{f}{f}{f}{f}  100%",
 ]
