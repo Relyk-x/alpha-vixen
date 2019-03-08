@@ -84,7 +84,7 @@ async def ping(ctx):
 @bot.command()
 @commands.has_permissions(ban_members = True)
 async def ban(ctx, member:discord.User = None, reason = None):
-    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
     #await ctx.trigger_typing(ctx.message.channel)
     if member == None or member == ctx.author:
         await ctx.send("You can't ban yourself!")
@@ -100,7 +100,7 @@ async def ban(ctx, member:discord.User = None, reason = None):
 @bot.command()
 @commands.has_permissions(kick_members=True)
 async def kick(ctx, member:discord.User = None, reason = None):
-    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="check"))
+    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
     #await ctx.trigger_typing(ctx.message.channel)
     if member == None or member == ctx.author:
         await ctx.send("You can't kick yourself!")
@@ -416,6 +416,7 @@ async def lovecalc(ctx, member:discord.User = None):
     if member == None:
         await ctx.send("You can't calculate nothing...")
         return
+    await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
     emb = discord.Embed(title="Love Calculator", description=f"**{ctx.message.author.name}《 :heartpulse: 》{member.name}**\n ‏‏‎ ", color=0xe02f5a)
     emb.add_field(name=f"{random.choice(config.heart)}", value=" ‏‏‎ ")
     emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url) 
