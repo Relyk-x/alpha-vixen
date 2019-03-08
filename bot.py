@@ -407,6 +407,20 @@ async def tos(ctx):
     msg = await ctx.send(embed=emb)
     await msg.add_reaction(discord.utils.get(bot.emojis, name="discord"))
 
+#love % command
+@bot.command()
+async def lovecalc(ctx, member:discord.User = None):
+    if member == ctx.author:
+        await ctx.send("You can't calculate yourself...")
+        return
+    if member == None:
+        await ctx.send("You can't calculate nothing...")
+        return
+    emb = discord.Embed(title="Love Calculator", description=f"**{ctx.message.author.name}《 :heartpulse: 》{member.name}**\n ‏‏‎ ", color=0xe02f5a)
+    emb.add_field(name=f"{random.choice(config.heart)}", value=" ‏‏‎ ")
+    emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url) 
+    await ctx.send(embed=emb)
+
 #Says something mean about you. (40 insults)
 @bot.command()
 async def insult(ctx, member:discord.User = None):
