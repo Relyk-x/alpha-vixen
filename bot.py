@@ -551,10 +551,10 @@ async def slap(ctx, member:discord.User = None):
 #help command
 @bot.command()
 async def help(ctx):
-	emb = discord.Embed(title=":bookmark_tabs: Commands", description='here are all my commands...', color=0xe02f5a)
-	emb.add_field(name="Aministrative commands", value=f"{p}ban\n{p}kick\n{p}purge\n{p}clear\n{p}delete\n{p}clean\n{p}ping\n{p}count", inline=False)
-	emb.add_field(name="General commands", value=f"{p}server\n{p}user\n{p}tos\n{p}say\n{p}embed\n{p}avatar\n{p}icon\n{p}password\n{p}invite\n{p}vote", inline=False)
-	emb.add_field(name="Fun Commands", value=f"{p}hug\n{p}kiss\n{p}pat\n{p}slap\n{p}birthday\n{p}urban\n{p}joke\n{p}insult", inline=False)
+	emb = discord.Embed(title=":bookmark_tabs: **Commands**", description='here are all my commands...', color=0xe02f5a)
+	emb.add_field(name="👑 Aministrative commands", value=f"{p}ban\n{p}kick\n{p}purge\n{p}clear\n{p}delete\n{p}clean\n{p}ping\n{p}count", inline=False)
+	emb.add_field(name="🎀 General commands", value=f"{p}server\n{p}user\n{p}tos\n{p}say\n{p}embed\n{p}avatar\n{p}icon\n{p}password\n{p}invite\n{p}vote", inline=False)
+	emb.add_field(name="✨ Fun Commands", value=f"{p}hug\n{p}kiss\n{p}pat\n{p}slap\n{p}birthday\n{p}urban\n{p}joke\n{p}insult", inline=False)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
 	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	await ctx.send(embed=emb)
