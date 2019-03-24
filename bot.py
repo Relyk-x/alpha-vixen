@@ -34,7 +34,7 @@ diff = datetime.datetime(now.year, 2, 13) - \
     datetime.datetime.today()  # Days until Christmas
 
 #client
-bot = commands.Bot(command_prefix="v.", status=yellow, activity=discord.Game(name="v0.2.0 | Booting...", type=3))
+bot = commands.Bot(command_prefix=",", status=yellow, activity=discord.Game(name="v0.2.0 | Booting...", type=3))
 
 #command removal 
 bot.remove_command("help")
@@ -44,7 +44,7 @@ bot.remove_command("help")
 async def on_ready():
     print("Ready to go!")
     print(f"Serving: {len(bot.guilds)} guilds.")
-    await bot.change_presence(status=green, activity=discord.Game(name="v0.2.0 | v.help", type=3))
+    await bot.change_presence(status=green, activity=discord.Game(name="v0.2.0 | ,help", type=3))
 
 @bot.listen()
 async def on_message(message):
@@ -421,7 +421,35 @@ async def lovecalc(ctx, member:discord.User = None):
     emb.add_field(name="Result:", value=f"{random.choice(config.heart)}")
     emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url) 
     await ctx.send(embed=emb)
+	
+#Pay your respects command
+@bot.command()
+async def f(ctx, *, message = None):
+    emoji = [":heart:", ":blue_heart:", ":green_heart:", ":purple_heart:", ":yellow_heart:"]
+    if message == None:
+        await ctx.send(f"**{ctx.author.name}** has paid their respects {random.choice(emoji)}")
+    else:
+        await ctx.send(f"**{ctx.author.name}** has paid their respects to **{message}** {random.choice(emoji)}")
 
+#Poll command
+@bot.command()
+@commands.has_permissions(administrator = True)
+async def poll(ctx, polltitle = None, *, pollmessage = None):
+    if polltitle == None:
+        await ctx.send(f"You must provide a title... (eg: {prefix}poll <title> <description>)")
+        return
+    elif pollmessage == None:
+    	await ctx.send(f"You must provide a description... (eg: {prefix}poll <title> <description>)")
+    	return
+    else:
+    	embed = discord.Embed(title="**`P` `O` `L` `L`**", color=0x7289da,)
+    	embed.add_field(name=f"{polltitle}", value=f"{pollmessage}", inline=False)
+        embed.add_field(name=f"Vote!", value="<:green_check_mark:553182041768853504> : `Yes`", inline=True)
+    	embed.add_field(name=" ‏‏‎ ", value="<:red_cross_mark:553181852228255745> : `No`", inline=True)
+    	msg = await ctx.send(embed=embed)
+    	await msg.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
+    	await msg.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
+	
 #Says something mean about you. (40 insults)
 @bot.command()
 async def insult(ctx, member:discord.User = None):
@@ -565,7 +593,7 @@ async def help(ctx):
 	emb = discord.Embed(title="📑 **Commands**", description='here are all my commands...', color=0xe02f5a)
 	emb.add_field(name="👑 Aministrative commands", value="`ban`, `kick`, `purge`, `clear`, `delete`, `clean`, `ping`, `count`", inline=False)
 	emb.add_field(name="🎀 General commands", value="`server`, `user`, `tos`, `say`, `embed`, `avatar`, `icon`, `password`, `invite`, `vote`", inline=False)
-	emb.add_field(name="✨ Fun Commands", value="`hug`, `kiss`, `pat`, `slap`, `birthday`, `urban`, `joke`, `insult`", inline=False)
+	emb.add_field(name="✨ Fun Commands", value="`hug`, `kiss`, `pat`, `slap`, `lovecalc`, `f`,`birthday`, `urban`, `joke`, `insult`", inline=False)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
 	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	await ctx.send(embed=emb)
