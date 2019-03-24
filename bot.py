@@ -554,10 +554,10 @@ async def kiss(ctx, member:discord.User = None):
 @bot.command()
 async def pat(ctx, member:discord.User = None):
 	if member == ctx.author:
-		await ctx.send("You can't kiss yourself...")
+		await ctx.send("You can't pat yourself...")
 		return
 	if member == None:
-		await ctx.send("You can't kiss thin air...")
+		await ctx.send("You can't pat thin air...")
 		return
 	emb = discord.Embed(description=f"***{member.name}**, you got a pat from **{ctx.message.author.name}***", color=0xe02f5a)
 	emb.set_image(url=random.choice(config.pat))
