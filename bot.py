@@ -439,16 +439,16 @@ async def poll(ctx, polltitle = None, *, pollmessage = None):
         await ctx.send(f"You must provide a title... (eg: {prefix}poll <title> <description>)")
         return
     elif pollmessage == None:
-    	await ctx.send(f"You must provide a description... (eg: {prefix}poll <title> <description>)")
-    	return
+        await ctx.send(f"You must provide a description... (eg: {prefix}poll <title> <description>)")
+        return
     else:
-    	embed = discord.Embed(title="**`P` `O` `L` `L`**", color=0x7289da,)
-    	embed.add_field(name=f"{polltitle}", value=f"{pollmessage}", inline=False)
+        embed = discord.Embed(title="**`P` `O` `L` `L`**", color=0x7289da,)
+        embed.add_field(name=f"{polltitle}", value=f"{pollmessage}", inline=False)
         embed.add_field(name=f"Vote!", value="<:green_check_mark:553182041768853504> : `Yes`", inline=True)
-    	embed.add_field(name=" ‏‏‎ ", value="<:red_cross_mark:553181852228255745> : `No`", inline=True)
-    	msg = await ctx.send(embed=embed)
-    	await msg.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
-    	await msg.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
+        embed.add_field(name=" ‏‏‎ ", value="<:red_cross_mark:553181852228255745> : `No`", inline=True)
+        msg = await ctx.send(embed=embed)
+        await msg.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
+        await msg.add_reaction(discord.utils.get(bot.emojis, name="red_cross_mark"))
 	
 #Says something mean about you. (40 insults)
 @bot.command()
