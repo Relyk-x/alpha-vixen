@@ -36,6 +36,9 @@ diff = datetime.datetime(now.year, 2, 13) - \
 #client
 bot = commands.Bot(command_prefix=",", status=yellow, activity=discord.Game(name="v0.2.0 | Booting...", type=3))
 
+#prefix
+prefix = ","
+
 #command removal 
 bot.remove_command("help")
 
@@ -463,7 +466,7 @@ async def insult(ctx, member:discord.User = None):
     	await msg.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
     	return
     else:
-    	msg = await ctx.send(f"{member.name} {random.choice(config.insult)}")  # Mention the user and say the insult
+    	msg = await ctx.send(f"**{member.name}** {random.choice(config.insult)}")  # Mention the user and say the insult
     	await msg.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
     	return
 
@@ -477,11 +480,11 @@ async def joke(ctx, member:discord.User = None):
     	return
     if member == id("545161003617484820"):
     	msg = await ctx.send(f"You can't insult me... {ctx.message.author.name} {random.choice(config.jokes)}")
-    	await msg.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
+    	await msg.add_reaction("\N{DRUM WITH DRUMSTICKS}")
     	return
     else:
-    	msg = await ctx.send(f"{member.name} {random.choice(config.jokes)}")  # Mention the user and say the insult
-    	await msg.add_reaction(discord.utils.get(bot.emojis, name="OkayChamp"))
+    	msg = await ctx.send(f"**{member.name}** {random.choice(config.jokes)}")  # Mention the user and say the insult
+    	await msg.add_reaction("\N{DRUM WITH DRUMSTICKS}")
     	return
 
 #urban command
