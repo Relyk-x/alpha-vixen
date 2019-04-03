@@ -578,6 +578,7 @@ async def slap(ctx, member:discord.User = None):
 
 #help command
 @bot.command()
+@commands.is_owner()
 async def help1(ctx):
 	emb = discord.Embed(title="📑 **Commands**", description='here are all my commands...', color=0xe02f5a)
 	emb.add_field(name="👑 Aministrative commands", value=f"{p}ban\n{p}kick\n{p}purge\n{p}clear\n{p}delete\n{p}clean\n{p}ping\n{p}count", inline=False)
@@ -594,6 +595,7 @@ async def help(ctx):
 	emb.add_field(name="👑 Aministrative commands", value="`ban`, `kick`, `poll`, `purge`, `clear`, `delete`, `clean`, `ping`, `count`", inline=False)
 	emb.add_field(name="🎀 General commands", value="`server`, `user`, `tos`, `say`, `embed`, `avatar`, `icon`, `password`, `invite`, `vote`", inline=False)
 	emb.add_field(name="✨ Fun Commands", value="`hug`, `kiss`, `pat`, `slap`, `lovecalc`, `f`, `birthday`, `urban`, `joke`, `insult`", inline=False)
+	emb.add_field(name="💬 Suggestions", value="If you have any feedback, comments or suggestions for this bot please contact `Relykx#2896`", inline=False)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
 	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	await ctx.send(embed=emb)
