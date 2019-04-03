@@ -176,7 +176,8 @@ async def count(ctx):
 	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	emb = discord.Embed(title=":information_source: Server Count",color=0xe02f5a)
 	emb.add_field(name="Status", value=f"{on}Online: {on_line}\n{ide}Idle: {on_idle}\n{dnds}Do Not Disturb: {on_dnd}\n{off}Offline: {off_line}", inline=True)
-	emb.add_field(name="Server",value=f"{p}Members: {total}\n{p}Users: {members}\n{p}Bots: {bots}", inline=True)
+	emb.add_field(name="Server", value=f"{p}Members: {total}\n{p}Users: {members}\n{p}Bots: {bots}", inline=True)
+	emb.add_field(name="Other", value=f"{p}Roles: {str(len(ctx.message.guild.roles))}\n{p}Channels: {str(len(ctx.message.guild.channels))}\n{p}Emotes: {str(len(ctx.message.guild.emojis))}", inline=True)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url) 
 	await ctx.send(embed=emb)
 
@@ -209,7 +210,7 @@ async def server(ctx):
 	emb.add_field(name="Owner", value=ctx.message.guild.owner.mention, inline=False)
 	emb.add_field(name="Server Status", value=f"{on}Online: {on_line}\n{ide}Idle: {on_idle}\n{dnds}Do Not Disturb: {on_dnd}\n{off}Offline: {off_line}", inline=True)
 	emb.add_field(name="Server Count", value=f"{p}Members: {total}\n{p}Users: {members}\n{p}Bots: {bots}", inline=True)
-	emb.add_field(name="Roles", value=len(ctx.message.guild.roles), inline=True)
+	emb.add_field(name="Roles", value=str(len(ctx.message.guild.roles)), inline=True)
 	emb.add_field(name="Channels", value=str(len(ctx.message.guild.channels)), inline=True)
 	emb.add_field(name="Number of Emotes", value=str(len(ctx.message.guild.emojis)), inline=False)
 	emb.add_field(name="Created", value=crea, inline=True)
