@@ -30,8 +30,7 @@ dnds = "<:dnd:548835091007143971>"
 
 #time
 now = datetime.datetime.now()
-diff = datetime.datetime(now.year, 2, 13) - \
-    datetime.datetime.today()  # Days until Christmas
+diff = datetime.datetime(now.year, 2, 13) - datetime.datetime.today()  # Days until Christmas
 
 #client
 bot = commands.Bot(command_prefix=",", status=yellow, activity=discord.Game(name="v0.2.0 | Booting...", type=3))
