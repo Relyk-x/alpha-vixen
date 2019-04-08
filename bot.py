@@ -599,7 +599,7 @@ async def help(ctx):
 	emb.add_field(name="👑 Aministrative commands", value="`ban`, `kick`, `poll`, `purge`, `clear`, `delete`, `clean`, `ping`, `count`", inline=False)
 	emb.add_field(name="🎀 General commands", value="`server`, `user`, `tos`, `say`, `embed`, `avatar`, `icon`, `password`, `invite`, `vote`", inline=False)
 	emb.add_field(name="✨ Fun Commands", value="`hug`, `kiss`, `pat`, `slap`, `lovecalc`, `f`, `birthday`, `urban`, `joke`, `insult`", inline=False)
-	emb.add_field(name="💬 Suggestions", value="If you have any feedback, comments or suggestions for this bot please contact `Relykx#2896`", inline=False)
+	emb.add_field(name="💬 Suggestions", value="If you have any feedback, comments or suggestions for this bot please contact `Varonis#2896`", inline=False)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
 	await ctx.message.add_reaction(discord.utils.get(bot.emojis, name="green_check_mark"))
 	await ctx.send(embed=emb)
