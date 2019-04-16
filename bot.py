@@ -380,9 +380,11 @@ async def password(ctx):
 #counts all the servers the bot is on
 @bot.command()
 @commands.is_owner()
-async def servercount(ctx):
+async def guildcount(ctx):
 	await ctx.message.add_reaction("\N{ENVELOPE}")
-	emb = discord.Embed(title="Server Count", description=f"Currently watching over {str(len(bot.guilds))} Discord servers", color=0xe02f5a)
+	emb = discord.Embed(title=":information_source: **SERVER COUNT**", color=0xe02f5a)
+	emb.add_field(name="Guilds", value=f"Watching over {str(len(bot.guilds))} Discord servers", inline=False)
+	emb.add_field(name="Users:", value=f"Serving {str(len(set(bot.get_all_members())))} users", inline=False)
 	await ctx.author.send(embed=emb)
 
 #say command
