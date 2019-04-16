@@ -383,7 +383,7 @@ async def stats(ctx):
 	emb = discord.Embed(title=":information_source: Stats", color=0xe02f5a)
 	emb.add_field(name="Guilds:", value=f"{str(len(bot.guilds))}", inline=True)
 	emb.add_field(name="Users:", value=f"{str(len(set(bot.get_all_members())))}", inline=True)
-	await ctx.author.send(embed=emb)
+	await ctx.send(embed=emb)
 
 #say command
 @bot.command()
