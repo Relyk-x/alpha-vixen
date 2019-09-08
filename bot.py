@@ -582,6 +582,7 @@ async def slap(ctx, member:discord.User = None):
 
 #TESTING SERVER LIST
 @bot.command()
+@commands.is_owner()
 async def servlist(ctx):
     serv = list(bot.guilds)
 
