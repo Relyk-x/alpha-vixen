@@ -576,17 +576,17 @@ async def slap(ctx, member:discord.User = None):
 @bot.command()
 @commands.is_owner()
 async def servlist(ctx):
-    	serv = list(bot.guilds)
+	serv = list(bot.guilds)
 
-    	embed = discord.Embed(title="<:server:581902073734496256> **Server List**", description=f"Currently watching over **{str(len(bot.guilds))}** Discord servers", color=0xe02f5a)
-    	try:
-    		for x in range(len(serv)):
-            	crea = serv[x-1].created_at.strftime("%A | %-d of %B %Y | %I:%M %p")
-            	embed.add_field(name=f"{dis}{serv[x-1].name}", value=f"ID: {serv[x-1].id}\nRegion: {serv[x-1].region}\nOwner: {serv[x-1].owner}\nMembers: {len(serv[x-1].members)}\nRoles: {len(serv[x-1].roles)}\nCreated: {crea}", inline=False)
-            	embed.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
-            	await ctx.trigger_typing()
-    	finally:
-    		await ctx.send(embed=embed)
+	embed = discord.Embed(title="<:server:581902073734496256> **Server List**", description=f"Currently watching over **{str(len(bot.guilds))}** Discord servers", color=0xe02f5a)
+	try:
+		for x in range(len(serv)):
+		crea = serv[x-1].created_at.strftime("%A | %-d of %B %Y | %I:%M %p")
+		embed.add_field(name=f"{dis}{serv[x-1].name}", value=f"ID: {serv[x-1].id}\nRegion: {serv[x-1].region}\nOwner: {serv[x-1].owner}\nMembers: {len(serv[x-1].members)}\nRoles: {len(serv[x-1].roles)}\nCreated: {crea}", inline=False)
+		embed.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
+		await ctx.trigger_typing()
+	finally:
+		await ctx.send(embed=embed)
 
 #counts all the servers the bot is on
 @bot.command()
