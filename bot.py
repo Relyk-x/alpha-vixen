@@ -377,14 +377,6 @@ async def password(ctx):
 	emb = discord.Embed(description='Here is your randomly generated password: ' + '`' + encryptedpass + '`', color=0xe02f5a)
 	await ctx.author.send(embed=emb)
 
-#counts all the servers the bot is on
-@bot.command()
-async def stats(ctx):
-	emb = discord.Embed(title=":information_source: Stats", color=0xe02f5a)
-	emb.add_field(name="Guilds:", value=f"{str(len(bot.guilds))}", inline=True)
-	emb.add_field(name="Users:", value=f"{str(len(set(bot.get_all_members())))}", inline=True)
-	await ctx.send(embed=emb)
-
 #say command
 @bot.command()
 async def say(ctx, *msg):
@@ -584,17 +576,28 @@ async def slap(ctx, member:discord.User = None):
 @bot.command()
 @commands.is_owner()
 async def servlist(ctx):
-    serv = list(bot.guilds)
+    	serv = list(bot.guilds)
 
-    embed = discord.Embed(title="<:server:581902073734496256> **Server List**", description=f"Currently watching over **{str(len(bot.guilds))}** Discord servers", color=0xe02f5a)
-    try:
-    	for x in range(len(serv)):
-            crea = serv[x-1].created_at.strftime("%A | %-d of %B %Y | %I:%M %p")
-            embed.add_field(name=f"{dis}{serv[x-1].name}", value=f"ID: {serv[x-1].id}\nRegion: {serv[x-1].region}\nOwner: {serv[x-1].owner}\nMembers: {len(serv[x-1].members)}\nRoles: {len(serv[x-1].roles)}\nCreated: {crea}", inline=False)
-            embed.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
-            await ctx.trigger_typing()
-    finally:
-    	await ctx.send(embed=embed)
+    	embed = discord.Embed(title="<:server:581902073734496256> **Server List**", description=f"Currently watching over **{str(len(bot.guilds))}** Discord servers", color=0xe02f5a)
+    	try:
+    		for x in range(len(serv)):
+            	crea = serv[x-1].created_at.strftime("%A | %-d of %B %Y | %I:%M %p")
+            	embed.add_field(name=f"{dis}{serv[x-1].name}", value=f"ID: {serv[x-1].id}\nRegion: {serv[x-1].region}\nOwner: {serv[x-1].owner}\nMembers: {len(serv[x-1].members)}\nRoles: {len(serv[x-1].roles)}\nCreated: {crea}", inline=False)
+            	embed.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
+            	await ctx.trigger_typing()
+    	finally:
+    		await ctx.send(embed=embed)
+
+#counts all the servers the bot is on
+@bot.command()
+async def stats(ctx):
+	try:
+		emb = discord.Embed(title="<:server:581902073734496256> **Connection Stats**", color=0xe02f5a)
+		emb.add_field(name="Guilds:", value=f"{str(len(bot.guilds))}", inline=True)
+		emb.add_field(name="Users:", value=f"{str(len(set(bot.get_all_members())))}", inline=True)
+		await ctx.trigger_typing()
+	finally:
+		await ctx.send(embed=emb)
 
 #help command
 @bot.command()
