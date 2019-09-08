@@ -575,11 +575,23 @@ async def slap(ctx, member:discord.User = None):
 #counts all the servers the bot is on
 @bot.command()
 async def stats(ctx):
+	await ctx.trigger_typing()
+	bots = 0
+	members = 0
+	on_line = str(len(set([I for I in bot.get_all_members() if I.status is discord.Status.online])))
+	on_idle = str(len(set([I for I in bot.get_all_members() if I.status is discord.Status.idle])))
+	on_dnd = str(len(set([I for I in bot.get_all_members() if I.status is discord.Status.dnd])))
+	off_line = str(len(set([I for I in bot.get_all_members() if I.status is discord.Status.offline])))
+	for x in bot.get_all_members():
+		if x.bot == True:
+			bots += 1
+		else:
+			members += 1
 	try:
 		emb = discord.Embed(title="<:server:581902073734496256> **Connection Stats**", color=0xe02f5a)
-		emb.add_field(name="Guilds:", value=f"{str(len(bot.guilds))}", inline=True)
-		emb.add_field(name="Users:", value=f"{str(len(set(bot.get_all_members())))}", inline=True)
-		await ctx.trigger_typing()
+		emb.add_field(name="Guilds:", value=f"{p}Total: {str(len(bot.guilds))}\n{p}Emoji: {str(len(set(bot.emojis)))}", inline=True)
+		emb.add_field(name="Status:", value=f"{on}Online: {on_line}\n{ide}Idle: {on_idle}\n{dnds}Do Not Disturb: {on_dnd}\n{off}Offline: {off_line}")
+		emb.add_field(name="Count:", value=f"{p}Members: {str(len(set(bot.get_all_members())))}\n{p}Users: {members}\n{p}Bots: {bots}", inline=True)
 	finally:
 		await ctx.send(embed=emb)
 
@@ -600,7 +612,7 @@ async def help1(ctx):
 async def help(ctx):
 	emb = discord.Embed(title="📑 **Commands**", description='here are all my commands...', color=0xe02f5a)
 	emb.add_field(name="👑 Aministrative commands", value="`ban`, `kick`, `poll`, `purge`, `clear`, `delete`, `clean`, `ping`, `count`", inline=False)
-	emb.add_field(name="🎀 General commands", value="`server`, `user`, `tos`, `say`, `embed`, `avatar`, `icon`, `password`, `invite`, `vote`", inline=False)
+	emb.add_field(name="🎀 General commands", value="`server`, `user`, `stats`, `tos`, `say`, `embed`, `avatar`, `icon`, `password`, `invite`, `vote`", inline=False)
 	emb.add_field(name="✨ Fun Commands", value="`hug`, `kiss`, `pat`, `slap`, `lovecalc`, `f`, `birthday`, `urban`, `joke`, `insult`", inline=False)
 	emb.add_field(name="💬 Suggestions", value="If you have any feedback, comments or suggestions for this bot please contact `Relykx#2896`", inline=False)
 	emb.set_footer(text=f"Requested by {ctx.message.author}", icon_url=ctx.message.author.avatar_url)
