@@ -572,7 +572,7 @@ async def slap(ctx, member:discord.User = None):
 	emb.set_image(url=random.choice(config.slap))
 	await ctx.send(embed=emb)
 
-#TESTING SERVER LIST
+#server list command
 @bot.command()
 @commands.is_owner()
 async def servlist(ctx):
